@@ -8,32 +8,34 @@
       text-align: center;
       font-family: helvetica;
     }
+    
     h1 {
-      font-family:"{select:Font}",Helvetica,Arial,sans-serif;
+      font-family:Helvetica,Arial,sans-serif;
       color: black;
-      font-size: 30px;
+      font-size: 24pt;
       margin: 0 auto;
       text-align: center;
+    }
+
     p {
         text-align: center;
         color: black;
-        font-size: 14px;
+        font-size: 14pt;
         padding: 0px 0px 50px 0px;
         margin: 0 auto;
-    
-        }
-        div {
-    outline: 1px solid;
-}
+        max-width: 75%;
+      }
+
+      summary {
+        font-size: 16pt;
+      }
+
 
 #button {
-    padding: 50px 0px 10px 0px;
+    padding: 50px 0px 50px 0px;
 }
-#con {
-   min-height:100%;
-   position:relative;
-}
-}
+
+
 #footer {
    position:relative;
    bottom:0;
@@ -61,12 +63,30 @@
     <section> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
   </form>
 </div>
+
+<details>
+  <summary>Wait, how does this work?</summary>
+  <br>
+  <p>When you make a purchase, it triggers some ~back end code~ that queries Google Images for a random image, places it into a custom template, and sends the file to our printing partner.</p>
+  
+
+  <figure>
+    <img src="printer.JPG">
+    <figcaption>Don, our printing partner.</figcaption>
+  </figure>
+
+  <p>Our printing partner then creates the print, stamps it with a guarantee of authenticity, and ships it to your door!</p>
+
+  <p>You won't see your purchase until it arrives in your mailbox, and I never see the print at all (really, I don't want to see it. Please don't tag me on Instagram @matthewflores with any purchased prints under my name).</p>
+
+  <p>Questions? Comments? Complaints? Please get in touch <a href="mailto:info@matthew-flores.com">here.</a></p>
+</details>
   
 
 
-<div id="con">
-   <div id="footer"><a href="http://matthew-flores.com">© Matthew Flores 2017-Now</div>
-</div>
+
+<div id="footer"><a href="http://matthew-flores.com">© Matthew Flores 2017-Now</div>
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
