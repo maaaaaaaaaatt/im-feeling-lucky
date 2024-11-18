@@ -23,7 +23,7 @@
         font-size: 14pt;
         padding: 0px 0px 50px 0px;
         margin: 0 auto;
-        max-width: 75%;
+        max-width: 50%;
       }
 
       summary {
@@ -32,7 +32,7 @@
 
 
 #button {
-    padding: 50px 0px 50px 0px;
+    padding: 25px 0px 50px 0px;
 }
 
 
@@ -54,6 +54,10 @@
   
   
   <p>Click the button below to order a unique, single-edition print generated via random Google Image Search. You won't see the image until the print arrives in your mailbox.</p>
+
+  <div id="price-info">
+   <p>The current price is <span style="color: green; font-size: larger; text-decoration: underline;">$100</span> as of <span id="datetime"></span>.</p>
+</div>
   
  <div id="button">
   <style>.pp-JRLSLAQ7QDXYU{text-align:center;border:none;border-radius:1.5rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
@@ -67,7 +71,7 @@
 <details>
   <summary>Wait, how does this work?</summary>
   <br>
-  <p>When you make a purchase, it triggers some ~back end code~ that queries Google Images for a random image, places it into a custom template, and sends the file to our printing partner.</p>
+  <p>When you make a purchase, it triggers some ~secret and custom back-end code~ that queries Google Images for a random image, places it into a custom template, signs it for me, and sends the file to our printing partner.</p>
   
 
   <figure>
@@ -96,6 +100,18 @@
 
   ga('create', 'UA-86512657-2', 'auto');
   ga('send', 'pageview');
+
+   // JavaScript code to display the current date and time
+   function updateDateTime() {
+            const currentDateTime = new Date().toLocaleString(); // Get current date and time
+            document.getElementById("datetime").textContent = currentDateTime; // Update span with datetime
+        }
+
+        // Call the function to set the initial datetime
+        updateDateTime();
+
+        // Optional: Refresh the datetime every minute
+        setInterval(updateDateTime, 60000);
 
 </script>
 
